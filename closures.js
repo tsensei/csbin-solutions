@@ -1,7 +1,7 @@
 // CHALLENGE 1
 function createFunction() {
 	function innerFunction() {
-		console.log('hello');
+		console.log("hello");
 	}
 
 	return innerFunction;
@@ -31,7 +31,7 @@ function outer() {
 	let counter = 0; // this variable is outside incrementCounter's scope
 	function incrementCounter() {
 		counter++;
-		console.log('counter', counter);
+		console.log("counter", counter);
 	}
 	return incrementCounter;
 }
@@ -128,7 +128,7 @@ function rollCall(names) {
 			console.log(names[count]);
 			count++;
 		} else {
-			console.log('Everyone accounted for');
+			console.log("Everyone accounted for");
 		}
 	}
 
@@ -234,7 +234,7 @@ function censor() {
 
 			for (let i = 0; i < separatedString.length; i++) {
 				// Check the word without punctuation
-				let wordWithoutPunctuation = separatedString[i].replace(/[.,!?]/g, '');
+				let wordWithoutPunctuation = separatedString[i].replace(/[.,!?]/g, "");
 
 				if (store[wordWithoutPunctuation]) {
 					// If there's a punctuation at the end, keep it
@@ -247,7 +247,7 @@ function censor() {
 				}
 			}
 
-			string = separatedString.join('');
+			string = separatedString.join("");
 
 			return string;
 		}
@@ -305,12 +305,12 @@ function roulette(num) {
 	function innerFunction() {
 		if (count < num) {
 			count++;
-			return 'spin';
+			return "spin";
 		} else if (count === num) {
 			count++;
-			return 'win';
+			return "win";
 		} else {
-			return 'pick a number to play again';
+			return "pick a number to play again";
 		}
 	}
 
@@ -387,9 +387,9 @@ function makeFuncTester(arrOfTests) {
 function makeHistory(limit) {
 	const historyArray = [];
 	function innerFunction(input) {
-		if (input === 'undo') {
+		if (input === "undo") {
 			if (historyArray.length === 0) {
-				return 'nothing to undo';
+				return "nothing to undo";
 			}
 
 			const undone = historyArray.pop();
@@ -427,7 +427,7 @@ function blackjack(array) {
 
 		function player() {
 			if (busted) {
-				return 'you are done!';
+				return "you are done!";
 			}
 
 			if (count === 0) {
@@ -440,7 +440,7 @@ function blackjack(array) {
 
 			if (sum > 21) {
 				busted = true;
-				return 'bust';
+				return "bust";
 			}
 
 			count++;
